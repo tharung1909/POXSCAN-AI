@@ -1,4 +1,4 @@
-#POXSCAN-AI
+
 
 <div align="center">
 
