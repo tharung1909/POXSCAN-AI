@@ -1,4 +1,3 @@
-<img width="1919" height="900" alt="Screenshot 2026-04-17 132839" src="https://github.com/user-attachments/assets/677db41a-0794-4b76-9ec9-daa270c379d4" />
 #POXSCAN-AI
 
 <div align="center">
@@ -15,7 +14,7 @@
 
 > A full-stack web application for early monkeypox detection using an ensemble of three deep learning models with GradCAM explainability and real-time webcam support.
 
-[POXSCAN-AI Screenshot]<img width="1919" height="900" alt="Screenshot 2026-04-17 132839" src="https://github.com/user-attachments/assets/677db41a-0794-4b76-9ec9-daa270c379d4" />
+**POXSCAN-AI Screenshot**<img width="1919" height="900" alt="Screenshot 2026-04-17 132839" src="https://github.com/user-attachments/assets/677db41a-0794-4b76-9ec9-daa270c379d4" />
 
 </div>
 
