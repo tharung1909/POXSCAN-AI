@@ -14,8 +14,7 @@
 
 > A full-stack web application for early monkeypox detection using an ensemble of three deep learning models with GradCAM explainability and real-time webcam support.
 
-![POXSCAN-AI Screenshot](<img width="1919" height="900" alt="Screenshot 2026-04-17 132839" src="https://github.com/user-attachments/assets/88c9c7ce-4f56-4561-9f91-98ed60f14ecf" />
-)
+[POXSCAN-AI Screenshot](Screenshot.png)
 
 </div>
 
