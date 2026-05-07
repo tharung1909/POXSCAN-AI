@@ -1,4 +1,4 @@
-# POXSCAN-AI
+#POXSCAN-AI
 
 <div align="center">
 
@@ -9,11 +9,13 @@
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)
 ![Flask](https://img.shields.io/badge/Flask-Backend-black?style=for-the-badge&logo=flask)
 ![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C?style=for-the-badge&logo=pytorch)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb)
+
 
 > A full-stack web application for early monkeypox detection using an ensemble of three deep learning models with GradCAM explainability and real-time webcam support.
 
-![POXSCAN-AI Screenshot](screenshot.png)
+![POXSCAN-AI Screenshot](<img width="1919" height="900" alt="Screenshot 2026-04-17 132839" src="https://github.com/user-attachments/assets/88c9c7ce-4f56-4561-9f91-98ed60f14ecf" />
+)
 
 </div>
 
@@ -54,6 +56,7 @@
 | 💬 **AI Chatbot** | Built-in chatbot widget for user assistance on any page |
 | 📰 **Disease Updates** | Latest monkeypox news and awareness information |
 | 👥 **Community Page** | Shared space for awareness and discussions |
+| 🗄️ **MongoDB Database** | User data and scan history stored in MongoDB Atlas |
 
 ---
 
@@ -67,6 +70,7 @@
 | Interface | Jupyter notebook / script | Full React web application |
 | Input | File upload only | Upload + live webcam capture |
 | Output | Label only | Label + confidence per model + heatmap |
+| Database | None | MongoDB for users and scan history |
 | Deployment | Research prototype | Full-stack deployable application |
 
 ---
@@ -84,6 +88,10 @@
 - PyTorch + Torchvision
 - pytorch-grad-cam
 
+**Database**
+- MongoDB (via PyMongo)
+- Stores user accounts, login sessions, scan history
+
 **Models**
 - VGG16 (fine-tuned, ImageNet pretrained)
 - ResNet18 (fine-tuned, ImageNet pretrained)
@@ -92,7 +100,6 @@
 **Other**
 - OpenCV (image processing)
 - PIL / Pillow
-- SQLite (via database.py)
 
 ---
 
@@ -150,7 +157,8 @@ POXSCAN-AI/
 │   ├── model_loader.py           # Loads all 3 models from .pth files
 │   ├── predict.py                # Inference + ensemble logic
 │   ├── gradcam.py                # GradCAM heatmap generation
-│   ├── database.py               # User data / scan history
+│   ├── database.py               # MongoDB connection & queries
+│   ├── .env                      # MongoDB URI + secret keys (not in repo)
 │   └── requirements.txt
 │
 ├── frontend/
@@ -194,6 +202,7 @@ POXSCAN-AI/
 ### Prerequisites
 - Python 3.10+
 - Node.js 18+
+- MongoDB Atlas account (free) or local MongoDB
 - Git
 
 ### 1. Clone the repository
@@ -216,7 +225,15 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Add Model Files
+### 3. Set up Environment Variables
+Create a `.env` file inside the `backend/` folder:
+```
+MONGO_URI=your_mongodb_connection_string_here
+SECRET_KEY=your_secret_key_here
+```
+> Get your MongoDB URI from [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) → Connect → Drivers
+
+### 4. Add Model Files
 Place your trained `.pth` files in the `models/` folder:
 ```
 models/
@@ -227,14 +244,14 @@ models/
 
 > 📥 Download trained models from Google Drive: [Click Here](PASTE_YOUR_DRIVE_LINK_HERE)
 
-### 4. Start Backend
+### 5. Start Backend
 ```bash
 cd backend
 python app.py
 # Runs on http://localhost:5000
 ```
 
-### 5. Frontend Setup
+### 6. Frontend Setup
 ```bash
 cd frontend
 npm install
@@ -276,20 +293,17 @@ npm start
 
 | Member | Contribution |
 |---|---|
-| Tharu | Frontend — React UI, all pages, Auth/Theme context, API integration |
+| Tharun | Frontend — React UI, all pages, Auth/Theme context, API integration |
 | TEAMMATE 2 | Backend — Flask API, model inference, GradCAM |
 | TEAMMATE 3 | ML — Model training, CBAM implementation, dataset preprocessing |
-| TEAMMATE 4 | Database, deployment, documentation |
+| TEAMMATE 4 | Database (MongoDB), deployment, documentation |
 
 ---
 
 
-
----
 
 ## ⚠️ Disclaimer
 
 POXSCAN-AI is an academic project and is **not** intended for clinical or medical use. Always consult a qualified healthcare professional for medical diagnosis.
 
 ---
-
