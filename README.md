@@ -283,9 +283,7 @@ npm start
 
 ---
 
-## 📄 License
 
-This project is licensed under the MIT License.
 
 ---
 
@@ -295,6 +293,3 @@ POXSCAN-AI is an academic project and is **not** intended for clinical or medica
 
 ---
 
-<div align="center">
-Made with ❤️ for early disease detection awareness
-</div>
