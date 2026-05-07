@@ -1,0 +1,19 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Node
+node_modules/
+build/
+
+# Models (too large for GitHub)
+models/*.pth
+
+# Uploads
+uploads/
+
+# OS
+.DS_Store
+Thumbs.db

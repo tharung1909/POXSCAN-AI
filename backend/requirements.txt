@@ -1,0 +1,13 @@
+flask
+flask-cors
+flask-jwt-extended
+pymongo
+torch
+torchvision
+Pillow
+numpy
+opencv-python-headless
+grad-cam
+bcrypt
+python-dotenv
+werkzeug
